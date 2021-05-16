@@ -1,5 +1,5 @@
 
-![screenshot](screen.png)
+![screenshot](Screen.png)
 
 # Project goals
 - Review how npm manages the app packages
