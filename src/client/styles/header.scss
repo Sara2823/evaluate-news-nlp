@@ -2,4 +2,9 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+    img{
+        float: left;
+        width: 100px;
+        height: 100px;
+        }
 }

@@ -4,12 +4,11 @@ import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
-
+import './static/logo.jpg'
 
 //webpack will export these files to Client library, we dont have to worry about how :)
 export{
     checkForURL,
-    
 }
 
 const generate = document.getElementById('generate');
@@ -20,8 +19,16 @@ generate.addEventListener('click',()=>{
 
     if (checkForURL(link)){
         console.log("link checked!");
-        postData('/add',{text:link})
-    } else{console.log("invalid link");}
+        postData('http://localhost:3000/add',{text:link})
+        .then((newData)=> {
+            document.getElementById('A').innerHTML = newData.agreement;
+            document.getElementById('S').innerHTML = newData.subjectivity;
+            document.getElementById('C').innerHTML = newData.confidence;
+            document.getElementById('I').innerHTML = newData.irony;
+          });       
+
+    } else{console.log("invalid link");
+    document.getElementById('link').placeholder = "Please Enter A url!"}
 })
 
 const postData = async ( url = '', data = {}) => {
@@ -38,6 +45,8 @@ const postData = async ( url = '', data = {}) => {
     console.log("=======newData========="+ newData);
     return newData;
 }
+
+
 
 
 

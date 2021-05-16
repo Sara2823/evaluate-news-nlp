@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <link rel="shortcut icon" href="#">
         <meta charset="utf-8">
         <title>Test</title>
 
@@ -10,10 +11,7 @@
 
         <header>
             <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+                <img src=".assets/static/logo.jpg" alt="logo">
             </div>
         </header>
 
@@ -27,14 +25,29 @@
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <table style="width:100%">
+                        <tr>
+                          <th><strong>Agreement</strong></th>
+                          <th><strong>Subjectivity</strong></th>
+                          <th><strong>Confidence</strong></th>
+                          <th><strong>Irony</strong></th>
+                        </tr>
+                        <tr>
+                          <td id="A"></td>
+                          <td id="S"></td>
+                          <td id="C"></td>
+                          <td id="I"></td>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Project One</p>
         </footer>
-        <!--
+        
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
@@ -44,7 +57,7 @@
                 });
             }
            </script>
-        -->
+        
 
     </body>
 
